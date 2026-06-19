@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mokabar — Il caffè giusto per il tuo locale</title>
+<title>Mokabar — Il caffè giusto per il tuo locale · Antica torrefazione piemontese</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -35,7 +35,6 @@
   .nav-cta:hover{background:var(--copper-deep)}
   @media(max-width:860px){.nav-links{display:none}}
 
-  /* HERO with photo */
   .hero{position:relative;min-height:100vh;display:flex;align-items:center;color:#fff;
     background:linear-gradient(100deg,rgba(20,13,7,.9) 12%,rgba(20,13,7,.55) 60%,rgba(20,13,7,.35)),
       url('https://images.unsplash.com/photo-1459755486867-b55449bb39ff?w=1900&q=80&auto=format&fit=crop') center/cover}
@@ -62,11 +61,18 @@
   .sec-head h2{font-size:clamp(1.9rem,3.6vw,2.9rem);margin:14px 0 14px;max-width:18ch}
   .sec-head p{color:var(--muted);font-size:1.08rem;max-width:50ch}
 
-  /* SAMPLE */
+  /* STORY / HERITAGE */
+  .story{background:var(--espresso);color:var(--crema);position:relative;overflow:hidden}
+  .story .wrap{display:grid;grid-template-columns:1fr 1fr;gap:54px;align-items:center}
+  .story-vis{height:420px;border-radius:18px;background-size:cover;background-position:center;box-shadow:0 30px 70px -30px rgba(0,0,0,.6)}
+  .story h2{color:#fff;font-size:clamp(2rem,3.6vw,2.8rem);margin:14px 0 18px}
+  .story p{opacity:.86;font-weight:300;margin-bottom:16px;max-width:46ch}
+  .story .sig{margin-top:22px;font-family:'Fraunces',serif;font-style:italic;font-size:1.15rem;color:var(--copper)}
+  @media(max-width:820px){.story .wrap{grid-template-columns:1fr}.story-vis{height:280px}}
+
   .sample{background:linear-gradient(180deg,#fbf8f2,#f3e8d6)}
   .sample-card{display:grid;grid-template-columns:1.05fr .95fr;gap:0;border-radius:24px;overflow:hidden;box-shadow:0 30px 80px -30px rgba(39,28,18,.4);background:#fff;border:1px solid var(--line)}
-  .sample-left{padding:48px 44px;color:#fff;position:relative;
-    background:linear-gradient(180deg,rgba(25,17,10,.86),rgba(25,17,10,.92)),url('https://images.unsplash.com/photo-1497935586351-b67a49e012bf?w=900&q=80&auto=format&fit=crop') center/cover}
+  .sample-left{padding:48px 44px;color:#fff;position:relative;background:linear-gradient(180deg,rgba(25,17,10,.86),rgba(25,17,10,.92)),url('https://images.unsplash.com/photo-1497935586351-b67a49e012bf?w=900&q=80&auto=format&fit=crop') center/cover}
   .sample-left h2{font-size:2.1rem;color:#fff;margin-bottom:14px}
   .sample-left p{opacity:.9;font-weight:300;margin-bottom:24px}
   .ticks{list-style:none;display:flex;flex-direction:column;gap:13px}
@@ -89,31 +95,28 @@
   .success p{color:var(--muted)}
   @media(max-width:820px){.sample-card{grid-template-columns:1fr}}
 
-  /* BLENDS with photos */
   .blends-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:44px}
   .blend{background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden;transition:.3s;display:flex;flex-direction:column}
   .blend:hover{transform:translateY(-5px);box-shadow:0 24px 50px -28px rgba(39,28,18,.4);border-color:rgba(178,122,63,.4)}
   .blend .bimg{height:160px;background-size:cover;background-position:center}
   .blend .bbody{padding:24px 24px 26px;display:flex;flex-direction:column;flex:1}
-  .blend .tag{font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:var(--copper);font-weight:600}
+  .blend .tag{font-size:.66rem;letter-spacing:.08em;text-transform:uppercase;color:var(--copper);font-weight:600}
   .blend h3{font-size:1.45rem;margin:6px 0 6px}
   .blend .desc{color:var(--muted);font-size:.92rem;min-height:44px}
-  .meter{display:flex;gap:4px;margin-top:16px;align-items:center}
-  .meter .dot{width:12px;height:12px;border-radius:50%;background:#e6d9c4}
+  .meter{display:flex;gap:3px;margin-top:16px;align-items:center;flex-wrap:wrap}
+  .meter .dot{width:11px;height:11px;border-radius:50%;background:#e6d9c4}
   .meter .dot.on{background:var(--espresso)}
-  .meter .mlabel{margin-left:10px;font-size:.74rem;color:var(--muted);font-weight:500}
+  .meter .mlabel{margin-left:8px;font-size:.74rem;color:var(--muted);font-weight:500}
   .blend.cta{background:var(--espresso);color:#fff;justify-content:center;padding:30px}
   .blend.cta h3{color:#fff}
   @media(max-width:820px){.blends-grid{grid-template-columns:1fr 1fr}}
   @media(max-width:540px){.blends-grid{grid-template-columns:1fr}}
 
-  /* ATMOSPHERE gallery */
   .gallery{display:grid;grid-template-columns:1.4fr 1fr 1fr;grid-template-rows:200px 200px;gap:14px;margin-top:10px}
   .gallery .g{background-size:cover;background-position:center;border-radius:14px}
   .gallery .g1{grid-row:span 2}
   @media(max-width:760px){.gallery{grid-template-columns:1fr 1fr;grid-template-rows:160px 160px}.gallery .g1{grid-row:span 1}}
 
-  /* SERVICES */
   .services{background:var(--crema)}
   .svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:44px}
   .svc{background:#fff;border-radius:18px;padding:32px 28px;border:1px solid var(--line)}
@@ -122,9 +125,7 @@
   .svc p{color:var(--muted);font-size:.94rem}
   @media(max-width:820px){.svc-grid{grid-template-columns:1fr}}
 
-  /* CTA BAND with photo */
-  .ctaband{position:relative;color:#fff;text-align:center;
-    background:linear-gradient(rgba(20,13,7,.84),rgba(20,13,7,.9)),url('https://images.unsplash.com/photo-1442512595331-e89e73853f31?w=1700&q=80&auto=format&fit=crop') center/cover}
+  .ctaband{position:relative;color:#fff;text-align:center;background:linear-gradient(rgba(20,13,7,.84),rgba(20,13,7,.9)),url('https://images.unsplash.com/photo-1442512595331-e89e73853f31?w=1700&q=80&auto=format&fit=crop') center/cover}
   .ctaband .wrap{padding:96px 24px;position:relative;z-index:2}
   .ctaband h2{font-size:clamp(1.9rem,4vw,3rem);max-width:20ch;margin:0 auto 16px}
   .ctaband p{opacity:.88;max-width:46ch;margin:0 auto 30px;font-weight:300}
@@ -145,12 +146,13 @@
 <body>
 
 <nav id="nav">
-  <a href="#" class="brand">MOKABAR<small>Torrefazione · Torino</small></a>
+  <a href="#" class="brand">MOKABAR<small>Antica torrefazione · Torino</small></a>
   <div class="nav-right">
     <div class="nav-links">
-      <a href="#blend">I blend</a>
+      <a href="#storia">L'azienda</a>
+      <a href="#blend">I caffè</a>
       <a href="#campioni">Campioni</a>
-      <a href="#servizi">Per il tuo locale</a>
+      <a href="#servizi">Servizi</a>
       <a href="#contatti">Contatti</a>
     </div>
     <a href="#campioni" class="nav-cta">Richiedi i campioni</a>
@@ -159,9 +161,9 @@
 
 <header class="hero">
   <div class="wrap">
-    <span class="eyebrow" style="color:var(--copper)">Torrefazione artigianale · Torino</span>
+    <span class="eyebrow" style="color:var(--copper)">Antica torrefazione piemontese · Torino</span>
     <h1>Il caffè giusto per il tuo locale, scelto insieme a te.</h1>
-    <p class="lead">Blend artigianali piemontesi, assistenza macchine e forniture continue. Provalo prima di decidere — senza impegno.</p>
+    <p class="lead">Blend artigianali tostati lentamente a Torino, assistenza macchine e forniture continue. Provalo prima di decidere — senza impegno.</p>
     <div class="hero-cta">
       <a href="#campioni" class="btn-primary">Richiedi i campioni gratuiti →</a>
       <a href="#servizi" class="btn-text">Oppure parla con un consulente</a>
@@ -174,10 +176,25 @@
   <div class="wrap">
     <div class="item"><span class="big">Torrefattori a Torino dal <span class="ph">[anno]</span></span><span class="lbl">Tostatura lenta, profilo costante in tazza</span></div>
     <div class="item"><span class="big">Oltre <span class="ph">[N]</span> locali serviti</span><span class="lbl">Bar, hotel e ristoranti, con continuità di fornitura</span></div>
-    <div class="item"><span class="big">Comodato macchine + consulenza</span><span class="lbl">Ti seguiamo dalla scelta del blend al servizio in tazza</span></div>
+    <div class="item"><span class="big">Comodato d'uso + consulenza</span><span class="lbl">Ti seguiamo dalla scelta del blend al servizio in tazza</span></div>
   </div>
 </div>
 
+<!-- STORY -->
+<section class="block story" id="storia">
+  <div class="wrap">
+    <div class="story-vis" style="background-image:url('https://images.unsplash.com/photo-1442512595331-e89e73853f31?w=1100&q=80&auto=format&fit=crop')"></div>
+    <div>
+      <span class="eyebrow">La nostra storia</span>
+      <h2>Da Torino, la pazienza di tostare lento.</h2>
+      <p>Mokabar nasce dalla tradizione della torrefazione piemontese: chicchi selezionati, tostati con calma, controllati uno per uno. Non inseguiamo la quantità — cerchiamo lo stesso identico caffè in tazza, ogni giorno.</p>
+      <p>È questo che cerca chi gestisce un locale: non una fornitura qualsiasi, ma un partner che capisce che dietro ogni tazza c'è la tua reputazione.</p>
+      <div class="sig">— La famiglia Mokabar, Torino dal [anno]</div>
+    </div>
+  </div>
+</section>
+
+<!-- SAMPLE -->
 <section class="block sample" id="campioni">
   <div class="wrap">
     <div class="sample-card">
@@ -214,29 +231,31 @@
   </div>
 </section>
 
+<!-- BLENDS (prodotti reali) -->
 <section class="block" id="blend">
   <div class="wrap">
     <div class="sec-head">
-      <span class="eyebrow">I nostri blend</span>
+      <span class="eyebrow">Le nostre miscele</span>
       <h2>Profili pensati per il servizio, non per la vetrina.</h2>
-      <p>Ogni miscela ha un'intensità e un carattere preciso. Nel campione scegliamo quelli giusti per il tuo tipo di locale.</p>
+      <p>Cinque miscele e tre monorigini. Ogni caffè con la sua intensità e il suo carattere. Nel campione scegliamo quelli giusti per il tuo locale.</p>
     </div>
     <div class="blends-grid">
-      <div class="blend"><div class="bimg" style="background-image:url('https://images.unsplash.com/photo-1511920170033-f8396924c348?w=700&q=80&auto=format&fit=crop')"></div><div class="bbody"><span class="tag">Miscela bar</span><h3>Bar Blend</h3><p class="desc">Equilibrato e rotondo, crema persistente. Il cavallo da lavoro del banco.</p><div class="meter"><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="mlabel">Intensità 7/12</span></div></div></div>
-      <div class="blend"><div class="bimg" style="background-image:url('https://images.unsplash.com/photo-1447933601403-0c6688de566e?w=700&q=80&auto=format&fit=crop')"></div><div class="bbody"><span class="tag">Premium</span><h3>Gran Crema</h3><p class="desc">Corpo pieno, dolcezza di cioccolato, crema densa. Per chi vuole farsi ricordare.</p><div class="meter"><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot"></span><span class="mlabel">Intensità 9/12</span></div></div></div>
-      <div class="blend"><div class="bimg" style="background-image:url('https://images.unsplash.com/photo-1497935586351-b67a49e012bf?w=700&q=80&auto=format&fit=crop')"></div><div class="bbody"><span class="tag">Intenso</span><h3>Extra Blend</h3><p class="desc">Deciso, persistente, note tostate. Per una clientela che ama il carattere.</p><div class="meter"><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="mlabel">Intensità 10/12</span></div></div></div>
-      <div class="blend"><div class="bimg" style="background-image:url('https://images.unsplash.com/photo-1524350876685-274059332603?w=700&q=80&auto=format&fit=crop')"></div><div class="bbody"><span class="tag">Origine</span><h3>Haiti Blend</h3><p class="desc">Morbido, aromatico, leggermente speziato. Una firma diversa per distinguersi.</p><div class="meter"><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="mlabel">Intensità 6/12</span></div></div></div>
-      <div class="blend"><div class="bimg" style="background-image:url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=700&q=80&auto=format&fit=crop')"></div><div class="bbody"><span class="tag">Selezione</span><h3>Scelta Blend</h3><p class="desc">La selezione fine: dolce, pulito, elegante. Per hotel e ristorazione attenta.</p><div class="meter"><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="mlabel">Intensità 5/12</span></div></div></div>
-      <div class="blend cta"><h3>Non sai quale scegliere?</h3><p class="desc" style="color:rgba(255,255,255,.82)">È esattamente per questo che esistono i campioni. Provi, confronti, decidi.</p><a href="#campioni" class="btn-text" style="margin-top:14px;align-self:flex-start">Richiedi i campioni →</a></div>
+      <div class="blend"><div class="bimg" style="background-image:url('https://images.unsplash.com/photo-1511920170033-f8396924c348?w=700&q=80&auto=format&fit=crop')"></div><div class="bbody"><span class="tag">90% Arabica · 10% Robusta</span><h3>Miscela Bar</h3><p class="desc">Dolce, equilibrata, crema chiara. La base di qualità per il banco.</p><div class="meter"><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="mlabel">Intensità 4/12</span></div></div></div>
+      <div class="blend"><div class="bimg" style="background-image:url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=700&q=80&auto=format&fit=crop')"></div><div class="bbody"><span class="tag">70% Arabica · 30% Robusta</span><h3>Miscela Extra</h3><p class="desc">Più corpo e crema, versatile. Quella che piace a tutti.</p><div class="meter"><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="mlabel">Intensità 4/12</span></div></div></div>
+      <div class="blend"><div class="bimg" style="background-image:url('https://images.unsplash.com/photo-1497935586351-b67a49e012bf?w=700&q=80&auto=format&fit=crop')"></div><div class="bbody"><span class="tag">30% Arabica · 70% Robusta</span><h3>Miscela Gran Crema</h3><p class="desc">Intensa, crema densa e persistente. L'espresso deciso che si fa ricordare.</p><div class="meter"><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="mlabel">Intensità 9/12</span></div></div></div>
+      <div class="blend"><div class="bimg" style="background-image:url('https://images.unsplash.com/photo-1524350876685-274059332603?w=700&q=80&auto=format&fit=crop')"></div><div class="bbody"><span class="tag">50% Arabica · 50% Robusta</span><h3>Miscela Haiti</h3><p class="desc">Carattere e aroma, una nota speziata. Una firma diversa per distinguersi.</p><div class="meter"><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="mlabel">Intensità 8/12</span></div></div></div>
+      <div class="blend"><div class="bimg" style="background-image:url('https://images.unsplash.com/photo-1453614512568-c4024d13c247?w=700&q=80&auto=format&fit=crop')"></div><div class="bbody"><span class="tag">90% Arabica</span><h3>Miscela Scelta</h3><p class="desc">La selezione fine: dolce, pulita, elegante. Per hotel e ristorazione attenta.</p><div class="meter"><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="mlabel">Intensità 4/12</span></div></div></div>
+      <div class="blend cta"><h3>+ 3 monorigini</h3><p class="desc" style="color:rgba(255,255,255,.82)">Santos, Nicaragua e Indian Kaapi Royale, per chi vuole spingersi oltre la miscela. Nel campione mettiamo anche queste.</p><a href="#campioni" class="btn-text" style="margin-top:14px;align-self:flex-start">Richiedi i campioni →</a></div>
     </div>
   </div>
 </section>
 
+<!-- GALLERY -->
 <section class="block" style="padding-top:0">
   <div class="wrap">
     <div class="gallery">
-      <div class="g g1" style="background-image:url('https://images.unsplash.com/photo-1442512595331-e89e73853f31?w=900&q=80&auto=format&fit=crop')"></div>
-      <div class="g" style="background-image:url('https://images.unsplash.com/photo-1518057111178-44a106bad636?w=700&q=80&auto=format&fit=crop')"></div>
+      <div class="g g1" style="background-image:url('https://images.unsplash.com/photo-1518057111178-44a106bad636?w=900&q=80&auto=format&fit=crop')"></div>
+      <div class="g" style="background-image:url('https://images.unsplash.com/photo-1447933601403-0c6688de566e?w=700&q=80&auto=format&fit=crop')"></div>
       <div class="g" style="background-image:url('https://images.unsplash.com/photo-1459755486867-b55449bb39ff?w=700&q=80&auto=format&fit=crop')"></div>
       <div class="g" style="background-image:url('https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=700&q=80&auto=format&fit=crop')"></div>
       <div class="g" style="background-image:url('https://images.unsplash.com/photo-1453614512568-c4024d13c247?w=700&q=80&auto=format&fit=crop')"></div>
@@ -244,16 +263,17 @@
   </div>
 </section>
 
+<!-- SERVICES (reali) -->
 <section class="block services" id="servizi">
   <div class="wrap">
     <div class="sec-head">
-      <span class="eyebrow">Per il tuo locale</span>
+      <span class="eyebrow">I servizi</span>
       <h2>Non solo caffè: un servizio che resta.</h2>
-      <p>Cambiare fornitore fa paura. Per questo non ti lasciamo mai solo — dalla macchina alla tazza.</p>
+      <p>Bar, ristorazione, hotel, vending, export, white label. Cambiare fornitore fa paura — per questo non ti lasciamo mai solo, dalla macchina alla tazza.</p>
     </div>
     <div class="svc-grid">
-      <div class="svc"><div class="ic">☕</div><h3>Comodato macchine</h3><p>Macchina professionale in comodato, installazione e manutenzione incluse. Tu pensi ai clienti, al resto pensiamo noi.</p></div>
-      <div class="svc"><div class="ic">◆</div><h3>White-label & private blend</h3><p>Il tuo caffè, con il tuo nome. Creiamo una miscela su misura per la tua identità.</p></div>
+      <div class="svc"><div class="ic">☕</div><h3>Comodato d'uso macchine</h3><p>Macchina professionale in comodato, installazione e manutenzione incluse. Tu pensi ai clienti, al resto pensiamo noi.</p></div>
+      <div class="svc"><div class="ic">◆</div><h3>White label & private blend</h3><p>Il tuo caffè, con il tuo nome. Creiamo una miscela su misura per la tua identità.</p></div>
       <div class="svc"><div class="ic">⟳</div><h3>Continuità & assistenza</h3><p>Stesso profilo in tazza, fornitura dopo fornitura. Più formazione al barista quando serve.</p></div>
     </div>
   </div>
@@ -262,7 +282,7 @@
 <section class="ctaband">
   <div class="wrap">
     <h2>Provare non costa niente. Sbagliare fornitore sì.</h2>
-    <p>Richiedi i campioni dei blend giusti per il tuo locale. Decidi solo dopo averli messi in tazza.</p>
+    <p>Richiedi i campioni delle miscele giuste per il tuo locale. Decidi solo dopo averle messe in tazza.</p>
     <a href="#campioni" class="btn-primary">Richiedi i campioni gratuiti →</a>
   </div>
 </section>
@@ -272,16 +292,16 @@
     <div class="cols">
       <div>
         <div class="brand" style="font-family:'Fraunces',serif">MOKABAR</div>
-        <p style="margin-top:10px;max-width:34ch">Antica torrefazione piemontese. Caffè artigianale per bar, hotel e ristoranti — a Torino e oltre.</p>
+        <p style="margin-top:10px;max-width:34ch">Antica torrefazione piemontese di caffè di qualità. Caffè artigianale per bar, hotel e ristoranti — a Torino e oltre.</p>
       </div>
       <div><h4>Contatti</h4><p>Torino, Italia<br>+39 011 226 80 20<br><a href="mailto:hello@mokabar.it">hello@mokabar.it</a></p></div>
-      <div><h4>Esplora</h4><p><a href="#blend">I blend</a><br><a href="#campioni">Richiedi i campioni</a><br><a href="#servizi">Per il tuo locale</a></p></div>
+      <div><h4>Esplora</h4><p><a href="#storia">L'azienda</a><br><a href="#blend">Le miscele</a><br><a href="#campioni">Richiedi i campioni</a><br><a href="#servizi">I servizi</a></p></div>
     </div>
-    <div class="legal"><span>© Mokabar — Torrefazione di Torino</span><span>Anteprima di design · Domani AI</span></div>
+    <div class="legal"><span>© Mokabar — Antica torrefazione di Torino</span><span>Anteprima di design · Domani AI</span></div>
   </div>
 </footer>
 
-<div class="ribbon">⚠️ <b>Anteprima di design</b> — foto di esempio (Unsplash), modulo dimostrativo. Si sostituiscono con le vostre foto, i vostri numeri e i vostri testi.</div>
+<div class="ribbon">⚠️ <b>Anteprima di design</b> — foto di esempio (Unsplash), modulo dimostrativo. Numeri (anno, locali) e foto si sostituiscono con i vostri veri.</div>
 
 <script>
   const nav=document.getElementById('nav');
